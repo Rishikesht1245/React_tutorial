@@ -1,8 +1,5 @@
 import { useState } from "react";
 const ControlledInputs = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     //do something
@@ -16,23 +13,11 @@ const ControlledInputs = () => {
         <label htmlFor="name" className="form-label">
           Name :
         </label>
-        <input
-          type="text"
-          id="name"
-          className="form-input"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <input type="text" id="name" className="form-input" value={name} />
         <label htmlFor="email" className="form-label">
           Email :
         </label>
-        <input
-          type="email"
-          id="email"
-          className="form-input"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <input type="email" id="email" className="form-input" value={email} />
       </div>
       <button type="submit" className="btn btn-block">
         Submit

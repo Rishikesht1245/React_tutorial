@@ -2,10 +2,12 @@ import { useState } from "react";
 const frameworks = ["react", "angular", "vue", "svelte"];
 const OtherInputs = () => {
   const [shipping, setShipping] = useState(false);
-  // const handleShipping = (e) => {
-  //   console.log(e.target.checked);
-  //   setShipping(!shipping);
-  // };
+  const [framework, setFramework] = useState("react");
+
+  const handleFrameWork = (e) => {
+    console.log(e.target.value);
+    setFramework(e.target.value);
+  };
   return (
     <div>
       <form className="form">
@@ -23,7 +25,19 @@ const OtherInputs = () => {
         </div>
         <div className="form-row" style={{ textAlign: "left" }}>
           <label htmlFor="framework" className="form-label">
-            Framework
+            <select name="framework" id="framework">
+              {frameworks.map((framework) => {
+                return (
+                  <option
+                    key={framework}
+                    value={framework}
+                    onChange={handleFrameWork}
+                  >
+                    {framework}
+                  </option>
+                );
+              })}
+            </select>
           </label>
           <input type="text" />
         </div>

@@ -1,6 +1,8 @@
-import Person from './Person';
+import Person from "./Person";
+import { memo } from "react";
 
 const List = ({ people }) => {
+  console.log("List render");
   return (
     <div>
       {people.map((person) => {

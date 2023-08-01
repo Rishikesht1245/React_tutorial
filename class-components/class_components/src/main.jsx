@@ -6,9 +6,12 @@ import FunctionalComponent from "./FunctionExample.jsx";
 import ClassComponent from "./ClassComponent.jsx";
 import ComponentToView from "./DataBinding.jsx";
 import Test from "./LifeCycle.jsx";
+import ControlledVsUncontrolled from "./ControlledVsUncontrolled.jsx";
+import Timer from "./useEffect.jsx";
+import Router from "./Router.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Test />
+    <Router />
   </StrictMode>
 );
